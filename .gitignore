@@ -5,5 +5,6 @@ __pycache__/
 dist/
 build/
 .ruff_cache/
+.pytest_cache/
 CONTINUE.sh
 NOTES.md

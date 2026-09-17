@@ -28,9 +28,12 @@ atloscli materials          # source material: id, URL, title (tab-separated)
 atloscli materials --json   # one JSON object per line
 ```
 
-## Lint
+## Development
 
 ```sh
-ruff check .
-ruff format --check .
+make install   # create .venv and install with dev dependencies (needs uv)
+make lint      # ruff check + format check
+make format    # apply ruff fixes and formatting
+make test      # run pytest (file tests need exiftool)
+make check     # lint + test
 ```

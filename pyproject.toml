@@ -9,11 +9,13 @@ description = "Command line tool for Atlos"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "c2pa-python>=0.37",
     "requests>=2.31",
 ]
 
 [project.optional-dependencies]
 dev = [
+    "pytest>=8",
     "ruff>=0.6",
 ]
 
@@ -22,6 +24,9 @@ atloscli = "atloscli.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/atloscli"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 88
